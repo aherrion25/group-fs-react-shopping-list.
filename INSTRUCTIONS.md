@@ -4,10 +4,10 @@ Isn't it just the worst when you come back from grocery shopping only to realize
 
 ## Technologies
 
-- *S*QL
-- *E*xpress
-- *R*eact
-- *N*ode
+- *SQL
+- *Express
+- *React
+- *Node
 
 ## Requirements
 
