@@ -1,5 +1,6 @@
 -- Don't forget to add your create table SQL 
 -- It is also helpful to include some test data
+Database name-shopping_list
 
 CREATE TABLE "list"(
 	"id" SERIAL PRIMARY KEY,
