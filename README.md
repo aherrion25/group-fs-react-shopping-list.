@@ -15,32 +15,6 @@ We want to store a list of items to buy in a database, so we can build up our li
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Checklist
 
 # Aubree
