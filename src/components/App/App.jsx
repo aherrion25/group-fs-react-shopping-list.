@@ -12,7 +12,7 @@ function App() {
     const [shoppingList, setShoppingList] = useState([]);
 
     const [itemName, setItemName] = useState('');
-    const [itemQuantity, SetItemQuantity] = useState('')
+    const [itemQuantity, setItemQuantity] = useState('')
 
 
     // GET 
@@ -46,7 +46,6 @@ function App() {
         }).catch(error =>{
             console.log(error);
             alert('Something went wrong in POST')
-            return;
         });
     }
 
@@ -72,13 +71,14 @@ function App() {
                 <br />
                     <lable htmlFor="quantity">Quantity:</lable>
                     <TextField fullWidth size="small" required id="quantity"
-                                value={itemQuantity}  onChange={(event) => SetItemQuantity(event.target.value) } />
+                                value={itemQuantity}  onChange={(event) => setItemQuantity(event.target.value) } />
                 <br />
                 <br />
                     <Button variant="contained" color="secondary" type="submit">Add New Item</Button>
                 </form>
 
             </Container>
+            
             <main>
                 <p>Under Construction...</p>
             </main>
