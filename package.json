@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Shopping List Applications",
   "main": "index.js",
-  "proxy": "http://localhost:5007",
+  "proxy": "http://localhost:5006",
   "scripts": {
     "start": "react-scripts build && node server/server.js",
     "client": "react-scripts start",
@@ -15,12 +15,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.3",
+    "@mui/material": "^5.10.3",
+    "@mui/styled-engine-sc": "^5.10.3",
     "axios": "^0.27.2",
     "express": "^4.17.1",
     "pg": "^8.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
