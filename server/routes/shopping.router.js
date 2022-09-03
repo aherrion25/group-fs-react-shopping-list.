@@ -32,9 +32,28 @@ router.post('/', (req, res) =>{
 });
 
 // PUT request
+router.put('/:id', (req, res) => {
+    const taskId = req.params.id;
+    console.log(listId);
+    const queryText = `UPDATE "list" SET (quantity, id) VALUES $1, $2;`
+    pool.query(queryText, [listId]).then((results) => {
+        res.sendStatus(200);
+        console.log('Error in Put list', error);
+    res.sendStatus(500);
 
+    })
+
+})
 
 // DELETE request
-
+router.delete('/:id', (req, res) => {
+    const queryText ='DELETE FROM "list" WHERE "id" = $1;';
+    pool.query(queryText, [req.params.id]).then((results) => {
+        res.sendStatus(200);
+    }).catch((error) => {
+        console.log('Error in Task Delete', error);
+        res.sendStatus(500);
+    })
+})
 
 module.exports = router;
