@@ -10,8 +10,10 @@ import './App.css';
 
 function App() {
     const [shoppingList, setShoppingList] = useState([]);
+
     const [itemName, setItemName] = useState('');
     const [itemQuantity, SetItemQuantity] = useState('')
+
 
     // GET 
     const fetchList = () => {
@@ -26,13 +28,36 @@ function App() {
         })
     }
 
-    //POST
+//POST
+    const addItem = (event) =>{
+        event.preventDefault();
+        console.log('adding Item',itemName, itemQuantity);
+        axios({
+            method: 'POST',
+            url: '/list',
+            data:{
+                name: itemName,
+                quantity: itemQuantity,
+            }
+        }).then(response =>{
+            setItemName();
+            setItemQuantity();
+            fetchList();
+        }).catch(error =>{
+            console.log(error);
+            alert('Something went wrong in POST')
+            return;
+        });
+    }
+
+    
 
 
     //PUT
 
 
     //DELETE
+
 
 
     return (
